@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/solarized.css">
+		<link rel="stylesheet" href="reveal/css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
@@ -55,673 +55,347 @@
 		<div class="reveal">
 			<div class="slides">
 
+				<section>
 				<section class="center">
-					<h3>Interpretability, Security & AI Ethics</h3>
-					<p align="center">Pierre Stock -
-						<a href="https://research.fb.com/category/facebook-ai-research">
-							Facebook AI Research
+					<h3>Competentiae</h3>
+					<p align="center"> Proof of Concept
 						</a>
 					</p>
-					<p align="center">Deep Learning in Practice - MVA 2019</p>
-					<p align="center">
+					<p align="center">2019</p>
+					<!-- <p align="center">
 						<img border-color="white" src="images/cherry.png" width="500px">
-					</p>
+					</p> -->
 				</section>
-
-				<section>
-					<h6> Summary</h6>
-					<p>
-						<b>Goal: </b>Approach the notion of interpretability in Deep Learning through the study of biases and adversarial examples
-					</p>
-					<p>
-		        <ul>
-	            <li>Uncovering biases</li>
-								<ul>
-									<li>Examples of biases</li>
-									<li>Superpixels activations</li>
-								</ul>
-	            <li>Adversarial examples</li>
-							<ul>
-								<li>Classical white box attacks</li>
-								<li>Classical defenses and how to circumvent them</li>
-								<li>Welcome to the real life: black box attacks</li>
-							</ul>
-		        </ul>
-					</p>
-				</section>
-
-				<section>
-					<h6>Examples of biases (1/3)</h6>
-					<p>
-						<a href="https://ieeexplore.ieee.org/document/5995347">
-							Unbiased look at dataset bias [A. Torralba et al., 2011]
-						</a>
-					</p>
-					<p>
-						Despite the best efforts of their creators, modern datasets appear to have a strong build-in bias
-					</p>
-					<p>
-						Cross-dataset generalization difficult to demonstrate
-					</p>
-					<p>
-						Biases when <b>collecting and labelling</b> the images
+				<section id="root">
+					<h6> </h6>
 					<p align="center">
-						<img border-color="white" src="images/cross.png" width="800px">
+						<b>  Votre litige concerne la matière immobilière? </b>
 					</p>
+					<p style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/hab'">Le litige concerne un bail d'habitation</button> </p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/com'">Le litige concerne un bail commercial</button></p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/con'">Le litige concerne des opérations de construction</button></p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/imo'">Le litige concerne la prioriété immobilière</button></p>
 				</section>
 
-				<section>
-					<h6>Examples of biases (1/3)</h6>
-					<p>
-						Biases when <b>collecting</b> the images
-					<p align="center" style="margin-bottom:-1em" class="fragment">
-						<img border-color="white" src="images/car.png" width="900px">
-					</p>
-					<p align="center" class="fragment">
-						<img border-color="white" src="images/sock.png" width="900px">
-					</p>
-				</section>
-
-				<section>
-					<h6>Examples of biases (1/3)</h6>
-					<p>
-						Biases when <b>labelling</b> the images
-					</p>
-					<p>
-						Try exploring label <b>hierarchy</b> for
-						<a url=http://www.image-net.org/>
-							ImageNet
-						</a>
-						and the
-						<a url=	https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a/>
-							1000 standard labels
-						</a>
-					</p>
-					<p>
-						Images are often intrinsicly <b>multi-label</b>
-					</p>
+				<section id="hab" data-transition="slide">
+					<h6> </h6>
 					<p align="center">
-						<img border-color="white" src="images/label.png" width="900px">
+						<b>Le litige concerne un bail d'habitation</b>
 					</p>
+					<p style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/pro'">Vous êtes propriétaire?</button> </p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/loc'">Vous êtes locataire?</button></p>
 				</section>
 
-				<section>
-					<h6>Examples of biases (1/3)</h6>
-					<p>
-						Biases when <b>labelling</b> the images
-					</p>
-					<p>
-						Try exploring label <b>hierarchy</b> for
-						<a url=http://www.image-net.org/>
-							Imagenet
-						</a>
-						and the
-						<a url=	https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a/>
-							1000 standard labels
-						</a>
-					</p>
-					<p>
-						Images are often intrinsicly <b>multi-label</b>
-					</p>
-					<p>
-						Guess the class of those ImageNet train images!
-					</p>
+				<section id="pro" data-transition="slide">
+					<h6> </h6>
 					<p align="center">
-						<img border-color="white" src="images/guess.png" width="500px">
+						<b>Vous êtes propriétaire</b>
 					</p>
+					<!-- <p>Litige sur un bail dans le secteur privé</p> -->
+					<p style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/abd'">Abandon du logement par le locataire?</button> </p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/deg'">Dégradations?</button></p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/det'">Dette locative?</button></p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/exp'">Expulsion?</button></p>
 				</section>
 
-				<section>
-					<h6>Examples of biases (2/3)</h6>
-					<p>
-						<a href="https://openreview.net/forum?id=Bygh9j09KX">
-							CNNs are biased towards texture [R. Geirhos et al., 2018]
-						</a>
-					<p>
-						Two contradictory hypotheses: <b>shape</b> versus <b>texture</b>
-					</p>
-					<p>
-						Demonstrates the importance of shape for humans (psychological study) and the prevalence of texture for CNNs
-					</p>
-					<p>
+				<section id="abd" data-transition="slide">
+					<h6> </h6>
 					<p align="center">
-						<img border-color="white" src="images/texture.png" width="700px">
+						<b>Abandon du logement par le locataire</b>
 					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Préalable obligatoire: faire constater l'abandon des lieux par un huissier</li>
+						<li style="margin-top :30px">Puis saisine du tribunal d'instance du lieu de situation du logement</li>
+						<li style="margin-top :30px">Représentation par un avocat non-obligatoire</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
-				<section>
-					<h6>Examples of biases (3/3)</h6>
-					<p>
-						<a href="https://arxiv.org/abs/1711.11443">
-							ConvNets and ImageNet beyond Accuracy [P. Stock & M. Cisse, 2018]
-						</a>
-					</p>
-					<p>
-						Pairs of images sampled from the Internet demonstrating racial biases
-					</p>
-					<p>
-						Dataset balancing vs. class balancing
-					</p>
-					<p>
-						<b>Exercise caution!</b> Biases are numerous and diverse. For example, ImageNet ping-pong players are often dressed in red.
-					</p>
+				<section id="deg" data-transition="slide">
+					<h6> </h6>
 					<p align="center">
-						<img border-color="white" src="images/racial.png" width="700px">
+						<b>Degradations</b>
 					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Procédure de déclaration au greffe du tribunal d'instance du lieu de situation de l'immeuble (conciliation préalable obligatoire) <p style="font-style:italic"  align="center">ou</p>assignation devant le tribunal d'instance du lieu de situation de l'immeuble par voie d'huissier</li>
+						<li style="margin-top :30px">Prescription: 3</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
-				<section>
-					<h6>Biases & learning</h6>
-					<p>
-						It is very hard to build a good dataset
-					</p>
-					<p>
-						Biases are essential for learning, we use them every day!
-					</p>
-					<p>
-						<b>Desirable</b> versus <b>undesirable</b> biases
-					</p>
-					<p>
-						Biases come from various sources: dataset collection, dataset balancing, network architecture (convolutions) inducing a strong prior on the data distribution...
-					</p>
-					<p>
-						Building trust for Deep Learning models by opening the black box
-					</p>
-				</section>
-
-				<section>
-					<h6>Superpixels activations</h6>
-					<p>
-						<a href="https://arxiv.org/abs/1602.04938">
-							"Why Should I Trust You?"": Explaining the Predictions of Any Classifier [M.T. Ribeiro et al., 2016]
-						</a>
-					</p>
-					<p>
-						Explain the predictions of any (binary) classifier $f$ that acts on images $z$ by approximating it locally with an interpretable model $g$. Here, $g$ acts on the vector $z' \in \{0,1\}^d$ denoting the presence or absence of the $d$ superpixels that partition the image $z$, $g(z') = w_g^Tz'$
-					</p>
-					<p>
-						Finding the best explanation $\xi(x)$ among the candidates $g$ for image $x$
-					</p>
-					<p>
-						\[\xi(x) = \argmin_{g \in G} \mathcal L(f, g,\pi_x) + \Omega(g)\]
-					</p>
-					<p>
-						Minimizing a local weighted loss $\mathcal L$ between $f$ and $g$ in the vicinity $\pi_x$ of $x$, regularized by the complexity $\Omega(g)$ of such an explanation.
-					</p>
-					<p>
-						\[\Omega(g) = \begin{cases}
-									0       & \textrm{if}~~~\|w_g\|_0 < K \\
-									+\infty & \textrm{otherwise} \\
-						\end{cases}\]
-					</p>
-				</section>
-
-				<section>
-					<h6>Superpixels activations</h6>
-					<p>
-						Objective
-					</p>
-					<p>
-						\[\xi(x) = \argmin_{g \in G} \mathcal L(f, g,\pi_x) + \Omega(g)\]
-					</p>
-					<p>
-						Local weighted loss
-					</p>
-					<p>
-						\[\mathcal L(f, g, \pi_x) = \sum_{z, z'\in \mathcal Z}\pi_x(z)\left(f(z) - g(z')\right)^2\]
-				 </p>
-				 <p>
- 					 where $\mathcal Z$ if the dataset of $n$ perturbed samples obtained from $x$ by randomly activating or deactivating some super-pixels in $x$.
-					</p>
-					<p>
-						Note that $z'$ denotes the one-hot encoding of the super-pixels whereas $z$ is the actual image formed by those super-pixels.
-					</p>
-					<p>
-						Finally, $\pi_x(z)$ is the exponential kernel  $\pi_x(z)= e^{\frac{\|x-z\|^2}{\sigma ^2}}$ and the problem is solved using Lasso + Least squares
-					</p>
-				</section>
-
-				<section>
-					<h6>Superpixels activations</h6>
-					<p>
-						Find $g$ per source image $x$ and display the top $k$ superpixels with the largest positive weights
-					</p>
-					<p>
-						Ambulance or jeep?
-					</p>
+				<section id="det" data-transition="slide">
+					<h6> </h6>
 					<p align="center">
-						<img border-color="white" src="images/jeep.png" width="600px">
+						<b>Dette locative</b>
 					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Procédure de déclaration au greffe du tribunal d'instance du lieu de situation de l'immeuble (conciliation préalable obligatoire) <p style="font-style:italic"  align="center"> ou</p> assignation devant le tribunal d'instance du lieu de situation de l'immeuble par voie d'huissier</li>
+						<li style="margin-top :30px">Prescription: 3</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
-				<section>
-					<h6>Superpixels activations</h6>
-					<p>
-						Find $g$ per source image $x$ and display the top $k$ superpixels with the largest positive weights
-					</p>
-					<p>
-						Explanation path for basketball class
-					</p>
+				<section id="exp" data-transition="slide">
+					<h6> </h6>
 					<p align="center">
-						<img border-color="white" src="images/basket.png" width="500px">
+						<b>Expulsion</b>
 					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Tentative de règlement amiable obligatoire</li>
+						<li style="margin-top :30px">Puis saisine du tribunal d'instance pour faire ordonner la résiliation du bail et l'expulsion du locataire</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
-				<section>
-					<h6>A small detour through weakly supervised learning</h6>
-					<p>
-						<b>Multi-label classification.</b>
-						<a href="https://arxiv.org/abs/1805.00932">
-							Exploring the Limits of Weakly Supervised Pretraining [D. Mahajan et al., 2018]
-						</a>
-						<ul>
-							<li>Train on 3.5 billion Instagram images with hashtags, takes <b class="fragment">22 days</b> on 336 GPUs</li>
-							<li>To compare with classical ImageNet training on 1 million images, takes <b class="fragment">7-8 hours</b> on 4 GPUs</li></li>
-						</ul>
-					<p>
-						Gives excellent and robust features (e.g. last layer of the network before the softmax)
-					</p>
-					<p>
-						No consensus on performance metric (except for transfer learning)
-					</p>
-				</section>
-
-				<section>
-					<h6>Adversarial examples</h6>
-					<p>
-						<a href="https://arxiv.org/abs/1312.6199">
-							Intriguing properties of Neural Networks [C. Szegedy et al., 2013]
-						</a>
-					</p>
-					<p>
-						Given a network $f_\theta$ and a sample $(x, y)$, an adversarial example is a perturbed version of $x$, $\tilde x = x + \delta_x$ such that
-						<ul>
-							<li>$\delta_x$ is small enough for $\tilde x$ to be undistinguishable from $x$ by a human</li>
-							<li>$\tilde x$ is incorrectly classified by the network</li>
-						</ul>
-					</p>
-					<p class="fragment">
-						<b>Non-targeted</b> adversarial example: predict any wrong class $\ne y$
-					</p>
-					<p class="fragment">
-						\[\tilde x = \argmax_{\tilde x \colon \|\tilde x - x\|_p \leq \varepsilon} \ell(f_\theta(x), y)\]
-					</p>
-					<p class="fragment">
-						<b>Targeted</b> adversarial example: predict a specific wrong class $\tilde y$
-					</p>
-					<p class="fragment">
-						\[\tilde x = \argmin_{\tilde x \colon \|\tilde x - x\|_p \leq \varepsilon} \ell(f_\theta(x), \tilde y)\]
-					</p>
-					<p class="fragment">
-						where $\varepsilon$ is the strength of the adversary and $\ell$ the cross-entropy loss
-					</p>
-				</section>
-
-				<section>
-					<h6>Adversarial examples</h6>
-					<p align="center" style="margin-top:1em">
-						<img border-color="white" src="images/adv.png" width="900px">
-					</p>
+				<section id="loc" data-transition="slide">
+					<h6> </h6>
 					<p align="center">
-						(distort noise is scaled for displaying purposes)
+						<b>Vous êtes locataire</b>
 					</p>
+					<p style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/gar'">Le litige concerne un dépôt de garantie? </button> </p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/loy'">Le litige concerne le loyer? </button></p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/dec'">Le litige concerne la décence du logement?</button></p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/bail'">Le litige concerne un bail d'habitation?</button></p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/mob'">Le litige concerne un bail mobilité?</button></p>
 				</section>
 
-				<section>
-					<h6>Adversarial examples</h6>
-					<p align="center" style="margin-top:1em">
-						<img border-color="white" src="images/ostrich.png" width="400px">
-					</p>
-				</section>
-
-				<section>
-					<h6>Defense against the Dark Arts</h6>
-					<p>
-						Real life challenges for adversarial examples (slide credit: <a href="=https://alexandresablayrolles.github.io/#30">Alexandre Sablayrolles</a>)
-						<ul>
-							<li class="fragment">Bypassing filters for <b>nude/terrorist content</b> on social media</li>
-							<li class="fragment">Fooling <b>self-driving cars</b></li>
-							<li class="fragment">Face detection: <b>unlocking phones</b></li>
-						</ul>
-					</p>
-					<p class="fragment">
-						Note that the noise $\delta_x$ is <b>not</b> random, so no chance for this to happen <b>by accident</b> (especially for targeted attacks). Interesting complement:
-						<a href="https://openreview.net/forum?id=HJz6tiCqYm">
-							Robustness to random perturbations [D. Hendrycks et al., 2018]
-						</a>
-					</p>
-					<p class="fragment">
-						Ideas for defending agains adversarial examples
-						<ul>
-							<li class="fragment">Input transformations</li>
-							<li class="fragment">Secret database of keys</li>
-							<li class="fragment">Adversarial training</li>
-							<li class="fragment">Regularization (cf. Lipschitz constant)</li>
-						</ul>
-					</p>
-				</section>
-
-				<section>
-					<h6>Measuring the success of an attack</h6>
-					<p>
-						Given a set of $n$ images $(x_1, \dots, x_n)$,  an attack generates $(\tilde x_1, \dots, \tilde x_n)$. We measure the success rate as a function of the $L_2$ dissimilarity
-					</p>
-					<p>
-						\[\frac 1 n \sum_{i=1}^n\mathbf 1(f_\theta(x_i) \ne f_\theta(\tilde x_i)) \qquad  \frac 1 n \sum_{i=1}^n \frac{\|\tilde x_i -x\|_2}{\|x_i\|_2}\]
-					</p>
-					<p>
-						By convention we do not attack already misclassified images. A strong adversarial attack has a high success rate with a low normalized $L_2$
-					</p>
-					<p align="center" style="margin-top:-0.5em" class="fragment">
-						<img border-color="white" src="images/measure.png" width="400px">
-					</p>
-				</section>
-
-				<section>
-					<h6>Classical white-box attacks: IFGSM</h6>
-					<p>
-						White box: full access to the model and in particular to its gradients
-					</p>
-					<p>
-						First-order Taylor expansion of $\ell(f_\theta(x), y)$ between $x$ and $\tilde x$
-					</p>
-					<p class="fragment">
-						\[\ell(f_\theta(\tilde x), y) = \ell(f_\theta(x+\delta_x), y) \approx \ell(f_\theta(x), y) + \nabla_x\ell(f_\theta(x), y)^T(\tilde x - x)\]
-					</p>
-					<p class="fragment">Hence for an untargeted attack</p>
-					<p class="fragment">
-							\[\tilde x = \argmax_{\tilde x \colon \|\tilde x - x\|_p \leq \varepsilon} \ell(f_\theta(x), y) \approx \argmax_{\tilde x \colon \|\tilde x - x\|_p \leq \varepsilon} \nabla_x\ell(f_\theta(x), y)^T(\tilde x - x) \]
-					</p>
-					<p class="fragment">When $p=+\infty$, we obtain</p>
-					<p class="fragment">
-						\[\tilde x = x + \varepsilon \cdot \text{sign}(\nabla_x\ell(f_\theta(x), y))\]
-					</p>
-					<p class="fragment">How to change it for a targeted attack towards class $\tilde y$ ?</p>
-					<p class="fragment">
-						\[\tilde x = x - \varepsilon \cdot \text{sign}(\nabla_x\ell(f_\theta(x), \tilde y))\]
-					</p>
-				</section>
-
-				<section>
-					<h6>Classical white-box attacks: IFGSM</h6>
-					<p>
-						Generally, perform at most $m$ steps with a small step size
-					</p>
-					<p>
-						\[\tilde x^{k+1} = x^k + \varepsilon \cdot \text{sign}(\nabla_x\ell(f_\theta(x^k), y))\]
-					</p>
-					<p>
-						Variant:project $x^k$ on the "manifold of images" (pixels values are always in range $[0,255]$, or $[0,1]$ if normalized)
-					</p>
-					<p>
-						\[\tilde x^{k+1} = \text{clamp}_{[0, 1]}\left(x^k + \varepsilon \cdot \text{sign}(\nabla_x\ell(f_\theta(x^k), y))\right)\]
-					</p>
-					<p>
-						Plotting test accuracy as a function of $L_2$ dissimilarity
-						<a href="https://arxiv.org/abs/1711.00117">
-							(source)
-						</a>
-					</p>
-					<p align="center" style="margin-top:-0.5em" class="fragment">
-						<img border-color="white" src="images/fgsm.png" width="600px">
-					</p>
-				</section>
-
-				<section>
-					<h6>Classical white-box attacks: IFGSM</h6>
-					<p>
-						Perform at most $m$ steps until image is misclassified
-					</p>
-					<p>
-						\[\tilde x^{k+1} = x^k + \varepsilon \cdot \text{sign}(\nabla_x\ell(f_\theta(x^k), y))\]
-					</p>
-					<p>
-						<a href="https://pytorch.org/">Pytorch</a> code draft for 1 iteration (exercice: complete it - add the loop)
-					</p>
-					<p>
-						<pre><code data-trim>
-							# assume (image, target) correctly classified by the network
-
-							# allow gradient computation for image
-							image.requires_grad = True
-
-							# forward pass
-							output = model(image)
-							loss = criterion(output, target)
-
-							# backward pass
-							optimized.zero_grad()
-							loss.backward()
-
-							# IFGSM step, iterate if still misclassified by the network
-							image.data.add_(step_size * image.grad.sign())
-
-  					</code></pre>
-					</p>
-				</section>
-
-				<section>
-					<h6>Classical white-box attacks: Deep Fool</h6>
-					<p>
-						<a href="https://arxiv.org/abs/1511.04599">
-							Deep fool [SM Moosavi-Dezfooli et al., 2015]
-						</a>
-						projects $x$ onto a linearization of the decision boundary defined by a binary classifier $g$ for $m$ iterations
-					</p>
-					<p>
-						\[\tilde x^{k+1} = x^k - \frac{g(x^k)}{\|\nabla_x g(x^k)\|^2_2}\nabla_x g(x^k)\]
-					</p>
-					<p align="center" class="fragment">
-						<img border-color="white" src="images/deep_fool.png" width="500px">
-					</p>
-					<p class="fragment">
-						Multi-class: project to the closest hyperplane
-					</p>
-				</section>
-
-				<section>
-					<h6>Classical white-box attacks: Carlini</h6>
-					<p>
-						<a href="https://arxiv.org/abs/1608.04644">
-							Towards Evaluating the Robustness of Neural Networks [Carlini et al., 2016]
-						</a>
-						combines an $L_2$ regularization term with a hinge-like loss
-					</p>
-					<p>
-						\[\tilde x = \argmin_{\tilde x}\|\tilde x - x\|^2 - \lambda\cdot \text{max}\left(-\kappa, \text{prob}(f_\theta(x))_y - \text{max}\left(\text{prob}(f_\theta(x))_{\tilde y}\mid \tilde y \ne y\right)\right)\]
-					</p>
-					<p>
-						where $\kappa$ is a margin and $\lambda$ controls the trade-off between regularization and perturbation
-					</p>
-					<p class="fragment">
-						Solved by gradient descent! (traditionally using the Adam optimizer)
-					</p>
-					<p align="center" class="fragment">
-						<img border-color="white" src="images/carlini.png" width="600px">
-					</p>
-				</section>
-
-				<section>
-					<h6>Adversarial patch</h6>
-					<p>
-						<a href="https://arxiv.org/abs/1712.09665">
-							Adversarial patch [T.B. Brown et al., 2017]
-						</a>
-					</p>
+				<section id="gar" data-transition="slide">
+					<h6> </h6>
 					<p align="center">
-						<iframe height="500px" width="700px" loop=True src="https://youtube.com/embed/i1sp4X57TL4?autoplay=0&controls=1&showinfo=0&loop=1&rel=0">
-						</iframe>
+						<b>  Le litige concerne un dépôt de garantie </b>
 					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Tribunal d'instance dont dépend le logement loué</li>
+						<li style="margin-top :30px">Prescription: 3 ans à compter du jour ou le dépôt de garantie aurait dû être versé</li>
+						<li style="margin-top :30px">Le recours à un avocat n'est pas obligatoire</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
-				<section>
-					<h6>Adversarial turtle</h6>
-					<p>
-						<a href="https://arxiv.org/abs/1707.07397">
-							Synthetizing Robust Adversarial Examples [A. Athalye et al., 2017]
-						</a>
-					</p>
+				<section id="loy" data-transition="slide">
+					<h6> </h6>
 					<p align="center">
-						<iframe height="500px" width="700px" loop=True src="https://youtube.com/embed/YXy6oX1iNoA?autoplay=0&controls=1&showinfo=0&loop=1&rel=0">
-						</iframe>
+						<b> Le litige concerne le loyer</b>
 					</p>
+					<p style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/rev'">Révision de loyer annuelle?</button> </p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/nloc'">Loyer du nouveau locataire?</button></p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/acti'">Action en diminution ou en hausse du loyer en cas de renouvellement?</button></p>
 				</section>
 
-				<section>
-					<h6>Classical defenses: input transformations</h6>
-					<p>
-						First idea: blurr the image a bit
+				<section id="rev" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b>  Révision de loyer annuelle</b>
 					</p>
-					<p class="fragment">
-						Why is this a <b>bad</b> idea?
-					</p>
-					<p class="fragment">
-						Blurring is equivalent to applying a convolutional kernel like the following
-					</p>
-					<p class="fragment">
-						\[\begin{bmatrix} 1 & 2 & 1 \\ 2 & 4 & 1 \\ 1 & 2 & 1\end{bmatrix}\]
-					</p>
-					<p class="fragment">
-						So it is equivalent to add a layer to the network, so we can still back-propagate through it and bypass the defense!
-					</p>
-					<p class="fragment">
-						Other ideas: jpeg compression, random resized crops, dropping some pixels and reconstructing using Total Variations (see
-						<a href="https://arxiv.org/abs/1711.00117">
-							Countering Adversarial Images using Input Transformations [C. Guo et al., 2018]
-						</a>)
-					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Tribunal d'instance dont dépend le logement loué</li>
+						<li style="margin-top :30px">Prescription: 1 an à partir de la date de révision du loyer</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
-				<section>
-					<h6>Classical defenses: image quilting</h6>
-					<p>
-						Image quilting: reconstruct images by replacing small patches with patches from “clean” images
+				<section id="nloc" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b>  Loyer du nouveau locataire </b>
 					</p>
-					<p>
-						The clean patches act as secret key and are part of a database that is <b>not known </b> by the attacker
-					</p>
-					<p>
-						The patches are selected by uniformly picking one of the $k$ nearest neighbors in the clean patches database (in pixel space) of the corresponding patch from the adversarial image
-					</p>
-					<p>
-						Motivation: the resulting image only consists of pixels that were not modified by the adversary
-					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Tribunal d'instance dont dépend le logement (après tentative amiable par LRAR au bailleur et saisine de la commission départementale de conciliation dont dépend le logement)</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
-				<section>
-					<h6>Circumventing Classical defenses: the return of the gradients</h6>
-					<p>
-						<a href="https://arxiv.org/abs/1802.00420">
-							Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples [A. Athalye et al., 2018]
-						</a>
+				<section id="acti" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b>  Action en diminution ou en hausse du loyer en cas de renouvellement</b>
 					</p>
-					<p class="fragment">
-						<b>Expectation over Transformation</b> (EOT). For defenses that employ randomized transformations of the input (e.g. random crops), compute the gradient over the expected transformation of the input. Formally, transformation $t$ sampled from $T$
-					<p class="fragment">
-						\[\nabla_\theta \mathbb E_{t\sim T}(f_\theta(t(x))) =  \mathbb E_{t\sim T}(\nabla_\theta f_\theta(t(x)))\]
-					</p>
-					<p class="fragment">
-						<b>Backward Pass Differentiable Approximation</b> (BPDA). Let $f^i$ by a non-differentiable layer of $f_\theta$. Find $g$ differentiable such that $g(x) \approx f^i(x)$,
-						<ul>
-							<li class="fragment">During <b>forward pass</b>, use $f^i$</li>
-							<li class="fragment">During <b>backward pass</b>, replace $f^i$ with $g$</li>
-						</ul>
-					</p>
-					<p class="fragment">
-						Exemple: jpeg compression ($g =$ identity)
-					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Délai: 5 mois au moins avant le terme du bail auprès du bailleur</li>
+						<li style="margin-top :30px">En cas de refus ou d'absence de réponse, saisine de la commission de conciliation</li>
+						<li style="margin-top :30px">A défaut de conciliation, saisine du juge d'instance avant le terme du bail</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
-				<section>
-					<h6>Classical defenses: Adversarial training</h6>
-					<p>
-						Train on adversarial examples until the model learns to classify them correctly.	Hard to fool but large computational cost.
+				<section id="dec" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b>  Le litige concerne la décence du logement </b>
 					</p>
-					<p class="fragment">
-						<b>Standard training</b>. Given training data $\mathcal D$, choose network weights $\theta$
-					</p>
-					<p class="fragment">
-						\[\theta^* = \argmin_\theta \mathbb E_{(x, y) \in \mathcal D}\ell(f_\theta(x), y)\]
-					</p>
-					<p class="fragment">
-						<b>Adversarial training</b>. Given training data $\mathcal D$, choose network weights $\theta$
-					</p>
-					<p class="fragment">
-						\[\theta^* = \argmin_\theta \mathbb E_{(x, y) \in \mathcal D}\left[\max_{\delta \in [-\varepsilon, \varepsilon]^n}\ell(f_\theta(x+\delta), y)\right]\]
-					</p>
-					<p class="fragment">
-						To approximately solve this formulation, solve the inner maximization problem by generating adversarial examples using e.g. IFGSM.
-					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Préalable: avertir le bailleur et le mettre en demeure de réaliser les travaux de mise en conformité par LRAR</li>
+						<li style="margin-top :30px">En l'absence de réponse dans le mois de la LRAR, saisine du tribunal d'instance ou la commission départementale de conciliation</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
-				<section>
-					<h6>Understanding adversarial attacks</h6>
-					<p>
-						Targeted adversarial attacks require a more important budget (in terms of $L_2$ dissimilarity)
+				<section id="bail" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b>  Le litige concerne un bail d'habitation </b>
 					</p>
-					<p>
-						Superpixels activations: either reveals the relevant object supporting the prediction or creates an ambiguous context
-						<a href="https://arxiv.org/abs/1711.11443">
-							(ConvNets and ImageNet beyond Accuracy [P. Stock & M. Cisse, 2018])
-						</a>
-					</p>
-					<p align="center" style="margin-top:-0.5em">
-						<img border-color="white" src="images/understand.png" width="900px">
-					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Préalable: LRAR</li>
+						<li style="margin-top :30px">Saisine du tribunal d'instance dont dépend le logement loué dans les 3 ans après l'apparition du litige</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
-				<section>
-					<h6>Welcome to the real life: black-box setup</h6>
-					<p>
-						The model to attack ("<b>the Oracle</b>"") is unknown. Only possibility to query it and see the label.
+				<section id="mob" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b>  Le litige concerne un bail mobilité</b>
 					</p>
-					<p class="fragment">
-						Fist idea: Transfer adversarial samples generated with a similar network
-					</p>
-					<p class="fragment">
-						Better idea, if <b>unlimited number of queries</b> and <b>access to output label of the Oracle</b>: train a model to mimic the behavior of the Oracle
-					</p>
-					<p class="fragment">
-						Realistic setup if <b>limited number of queries</b>, for example, limited number of uploads to a social media app/website: approximate the gradient
-					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Préalable: LRAR</li>
+						<li style="margin-top :30px">Saisine du tribunal d'instance</li>
+						<li style="margin-top :30px">Attention: la commission départementale de conciliation n'est pas compétente en matière de bail mobilité</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
-				<section>
-					<h6>Welcome to the real life: black-box setup</h6>
-					<p>
-						<a href="https://arxiv.org/abs/1602.02697">
-							Practical Black-Box Attacks against Machine Learning [N. Papernot et al., 2016]
-						</a>
+				<section id="com" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b>  Le litige concerne un bail commercial </b>
 					</p>
-					<p>
-						Train a model to mimic the behavior of the Oracle
-					</p>
-					<p align="center" style="margin-top:-0.5em">
-						<img border-color="white" src="images/oracle.png" width="600px">
-					</p>
+					<p style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/resolu'">Mise en oeuvre de la clause résolutoire?</button> </p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/renouv'">Renouvellement du bail commercial?</button></p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/loyy'">Le litige porte sur le loyer?</button></p>
 				</section>
 
-				<section>
-					<h6>Welcome to the real life: black-box setup</h6>
-					<p>
-						<a href="https://arxiv.org/abs/1804.08598">
-							Black-box Adversarial Attacks with Limited Queries and Information [A. Ilyas et al., 2018]
-						</a>
+				<section id="resolu" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b>  Mise en oeuvre de la clause résolutoire</b>
 					</p>
-					<p>
-						Idea: approximate the gradient of the loss function $\ell$ wrt $x$ by querying the classifier on samples around $x$ rather than computing it by backpropagation
-					</p>
-					<p>
-						We draw $n$ samples $\tilde x_i = x + \sigma \delta_i$ where $\delta \sim \mathcal N(0, 1)$. We can show
-					</p>
-					<p>
-						\[\nabla_x \mathbb E\left(\ell(f_\theta(x)), y)\right) \approx \frac{1}{n\sigma}\sum_{i=1}^n \delta_i \ell(f_\theta(x + \sigma \delta_i)), y)\]
-					</p>
-					<p>
-						In practice, for one ImageNet sample on a classical ResNet (binary classes) $n \approx 50$ and $\sigma \approx 0.001$.
-					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Compétence du tribunal de grande instance du lieu de situation de l'immeuble</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
 				</section>
 
+				<section id="renouv" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b>  Renouvellement du bail commercial</b>
+					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Tribunal de grande instance</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
+				</section>
+
+				<section id="loyy" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b>  Le litige porte sur le loyer </b>
+					</p>
+					<p style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/idx'">Indexation du loyer?</button> </p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/loyc'">Le litige concerne les loyers commerciaux?</button></p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/revc'">Révision du loyer commercial?</button></p>
+				</section>
+
+				<section id="idx" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b> Indexation du loyer</b>
+					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Compétence du tribunal de grande instance du lieu de situation de l'immeuble</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
+				</section>
+
+				<section id="loyc" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b>  Le litige concerne les loyers commerciaux</b>
+					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Compétence du tribunal de grande instance du lieu de situation de l'immeuble</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
+				</section>
+
+				<section id="revc" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b> Révision du loyer commercial</b>
+					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Compétence du tribunal de grande instance du lieu de situation de l'immeuble</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
+				</section>
+
+				<section id="con" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b> Le litige concerne des opérations de construction </b>
+					</p>
+					<p style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/expert'">Vous souhaitez faire désigner un expert avant travaux? </button> </p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/avt'">Un litige porte sur des opérations de construction ou des travaux?</button></p>
+				</section>
+
+				<section id="expert" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b> Vous souhaitez faire désigner un expert avant travaux</b>
+					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Saisine du juge des référés du tribunal de grande instance du ressort dans lequel se trouve le bien</li>
+						<li style="margin-top :30px">Représentation obligatoire par avocat</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
+				</section>
+
+				<section id="avt" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b> Un litige porte sur des opérations de construction ou des travaux</b>
+					</p>
+					<p style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/inf'">Le montant du litige est inférieur à 10.000 euros?</button> </p>
+					<p> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/sup'">Le montant du litige est supérieur à 10.000 euros?</button></p>
+				</section>
+
+				<section id="inf" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b> Le montant du litige est inférieur à 10.000 euros</b>
+					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Saisine du tribunal d'instance</li>
+						<li style="margin-top :30px">La représentation par avocat n'est pas obligatoire</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
+				</section>
+
+				<section id="sup" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b> Le montant du litige est supérieur à 10.000 euros</b>
+					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Saisine du tribunal de grande instance</li>
+						<li style="margin-top :30px">La représentation par avocat est obligatoire</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
+				</section>
+
+				<section id="imo" data-transition="slide">
+					<h6> </h6>
+					<p align="center">
+						<b> Le litige concerne la prioriété immobilière</b>
+					</p>
+					<ul style="margin-top :70px ; font-size : 30px">
+						<li>Compétence exclusive du tribunal de grande instance du lieu de situation de l'immeuble</li>
+					</ul>
+					<p align="center" style="margin-top :70px"> <button class="pure-button" style="font-family: 'Source Sans Pro';font-size : 20px" onclick="location.href='#/root'">Retour</button></p>
+				</section>
+
+				</section>
 			</div>
 		</div>
 
